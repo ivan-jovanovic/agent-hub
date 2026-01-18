@@ -2,7 +2,7 @@
 
 A native macOS menu bar app for managing Claude Code and OpenAI Codex CLI sessions.
 
-![Agent Hub Screenshot](image_full3.png)
+![Agent Hub Screenshot](screenshot.png)
 
 ## Features
 
