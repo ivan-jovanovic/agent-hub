@@ -1,6 +1,6 @@
 # Agent Hub
 
-A native macOS menu bar app for managing Claude Code and OpenAI Codex CLI sessions.
+A native macOS app for managing Claude Code and OpenAI Codex CLI sessions. Includes a full window interface and menu bar quick access.
 
 ![Agent Hub Screenshot](screenshot.png)
 
