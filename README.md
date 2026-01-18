@@ -17,11 +17,10 @@ A native macOS menu bar app for managing Claude Code and OpenAI Codex CLI sessio
 ```bash
 git clone https://github.com/ivan-jovanovic/agent-hub.git
 cd agent-hub
-./Scripts/build.sh
-open AgentUI.app
+./Scripts/setup.sh
 ```
 
-Move `AgentUI.app` to your Applications folder to keep it.
+The setup script checks prerequisites, installs missing dependencies, and builds the app.
 
 ## Requirements
 
