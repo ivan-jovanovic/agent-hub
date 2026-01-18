@@ -29,6 +29,8 @@ struct MainContentView: View {
     @StateObject private var codexUsageService = CodexUsageService()
     @State private var selectedProject: Project?
     @State private var selectedAgent: AgentType = .claudeCode
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    @State private var showOnboarding = false
 
     private var currentProjects: [Project] {
         switch selectedAgent {
@@ -166,6 +168,19 @@ struct MainContentView: View {
             loadProjects()
             // Only refresh Claude usage by default to avoid spawning Codex PTY unnecessarily
             usageService.refresh()
+
+            // Show onboarding on first launch or if iTerm2 is missing
+            if !hasCompletedOnboarding || !FileManager.default.fileExists(atPath: "/Applications/iTerm.app") {
+                showOnboarding = true
+            }
+        }
+        .onChange(of: showOnboarding) { _, newValue in
+            if !newValue {
+                hasCompletedOnboarding = true
+            }
+        }
+        .sheet(isPresented: $showOnboarding) {
+            OnboardingView(isPresented: $showOnboarding)
         }
         .overlay {
             if isLoading && currentProjects.isEmpty {
