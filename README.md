@@ -14,9 +14,16 @@ A native macOS menu bar app for managing Claude Code and OpenAI Codex CLI sessio
 
 ## Installation
 
-### Download (recommended)
+### Homebrew (recommended)
 
-Download the latest `.zip` from [Releases](https://github.com/ivan-jovanovic/agent-hub/releases), extract, and move `Agent Hub.app` to your Applications folder.
+```bash
+brew tap ivan-jovanovic/agent-hub https://github.com/ivan-jovanovic/agent-hub
+brew install --cask agent-hub
+```
+
+### Manual download
+
+Download the latest `.zip` from [Releases](https://github.com/ivan-jovanovic/agent-hub/releases), extract, and move `Agent Hub.app` to Applications.
 
 ### Build from source
 
@@ -25,8 +32,6 @@ git clone https://github.com/ivan-jovanovic/agent-hub.git
 cd agent-hub
 ./Scripts/setup.sh
 ```
-
-The setup script checks prerequisites and builds the app.
 
 ## Requirements
 
