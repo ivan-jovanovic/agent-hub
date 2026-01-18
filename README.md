@@ -41,7 +41,7 @@ cd agent-hub
 
 ## Contributing
 
-Contributions welcome! Open an issue or pull request.
+Contributions welcome! See [CLAUDE.md](CLAUDE.md) for architecture details.
 
 ## License
 
